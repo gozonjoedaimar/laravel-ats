@@ -2,4 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'App\Http\Controllers\WelcomeController@index')->name('welcome');
+// auth routes
+include __DIR__ . '/auth.php';
+
+Route::middleware('auth')->group(function () {
+    Route::get('/', 'App\Http\Controllers\WelcomeController@index')->name('welcome');
+});
