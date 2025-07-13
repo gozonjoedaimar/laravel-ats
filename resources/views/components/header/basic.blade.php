@@ -3,9 +3,12 @@
     <h1>laravel</h1>
     <nav>
         <ul class="flex gap-4">
-            <li>Menu 1</li>
-            <li>Menu 2</li>
-            <li>Menu 3</li>
+            <li>
+                <a href="{{ route('welcome') }}">Home</a>
+            </li>
+            <li>
+                <a href="{{ route('applicants.index') }}">Applicants</a>
+            </li>
         </ul>
     </nav>
     <form action="{{ route('logout') }}" method="POST">
