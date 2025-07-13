@@ -8,4 +8,8 @@
             <li>Menu 3</li>
         </ul>
     </nav>
+    <form action="{{ route('logout') }}" method="POST">
+        @csrf
+        <button>Logout</button>
+    </form>
 </header>

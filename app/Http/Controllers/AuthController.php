@@ -27,4 +27,11 @@ class AuthController extends Controller
             'email' => 'The provided credentials are incorrect.',
         ]);
     }
+    //
+    public function logout()
+    {
+        Auth::logout();
+
+        return redirect('/');
+    }
 }

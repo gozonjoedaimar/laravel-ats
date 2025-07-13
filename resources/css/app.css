@@ -11,6 +11,20 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-.btn-default {
-    @apply border rounded-sm
+html,
+body {
+    @apply h-full;
+}
+
+input,
+button {
+    @apply border rounded-sm py-1 px-2 text-sm focus:outline focus:outline-blue-400;
+}
+
+.form-group {
+    @apply flex flex-col gap-1;
+}
+
+.form-group label {
+    @apply text-sm;
 }

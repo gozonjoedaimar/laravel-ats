@@ -1,5 +1,5 @@
 {{-- reference: https://laravel.com/docs/12.x/blade#layouts-using-template-inheritance --}}
-@extends('layout.default')
+@extends('layout.dashboard')
 
 @section('title', 'Welcome')
 
