@@ -18,35 +18,6 @@
             </div>
             <button type="submit">Submit</button>
         </form>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($list as $applicant)
-                    <tr>
-                        <td>{{ $applicant->name }}</td>
-                        <td>
-                            <form action="{{ route('applicants.destroy', $applicant->id) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button>Delete</button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-
-                @if(count($list) == 0)
-                    <tr>
-                        <td colspan="4">No Applicants</td>
-                    </tr>
-                @endif
-            </tbody>
-        </table>
+        <livewire:applicants-table :applicants="$list" />
     </div>
 @endsection

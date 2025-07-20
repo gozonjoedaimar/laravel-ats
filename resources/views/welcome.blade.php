@@ -5,5 +5,4 @@
 
 @section('content')
     <p class="text-teal-600">Welcome to {{ config('app.name', 'Laravel') }}!</p>
-    <livewire:guest-name />
 @endsection
